@@ -1,0 +1,55 @@
+/* -------------------------------------------- */
+/*                                              */
+/* Tabs                                         */
+/* -> Styles                                    */
+/*                                              */
+/* -------------------------------------------- */
+
+.tabs {
+  display: flex;
+  flex-direction: column;
+}
+
+.tab-list {
+  display: flex;
+  list-style: none;
+  gap: var(--size-8);
+}
+
+.tab-button {
+  padding: var(--size-4);
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--color-text-dark);
+  font-size: clamp(
+    var(--font-size-handheld-heading-7),
+    0.7727rem + 1.1364vw,
+    var(--font-size-heading-7)
+  );
+  line-height: var(--line-height-heading-7);
+  border-bottom: 1px solid transparent;
+
+  &:hover {
+    border-color: var(--brand-33);
+  }
+}
+
+.tab-button--active {
+  border-color: var(--brand-15);
+
+  &:hover {
+    border-color: var(--brand-15);
+  }
+}
+
+.tab-panel {
+  border-top: 1px solid var(--brand-33);
+}
+
+@media (--min-breakpoint-md) {
+  .tab-list {
+    gap: var(--size-8);
+  }
+}

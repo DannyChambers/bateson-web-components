@@ -1,0 +1,133 @@
+/* -------------------------------------------- */
+/*                                              */
+/* List                                         */
+/* -> Styles                                    */
+/*                                              */
+/* -------------------------------------------- */
+
+.list {
+  font-family: var(--font-family-body);
+  margin: 0;
+  padding: 0 0 0 var(--size-6);
+
+  li {
+    padding-bottom: var(--size-4);
+  }
+}
+
+/* -------------------------------------------- */
+/* Types                                        */
+/* -------------------------------------------- */
+
+/* ----- ol ----- */
+
+.list--ol {
+  list-style-type: decimal;
+
+  > li::marker {
+    font-weight: bold;
+  }
+}
+
+/* ----- ul ----- */
+
+.list--ul {
+  list-style-type: none;
+  color: var(--color-text-dark);
+
+  > li {
+    position: relative;
+
+    &::before {
+      color: var(--brand-29);
+      content: "•";
+      position: absolute;
+      left: calc(var(--size-5) * -1);
+    }
+  }
+}
+
+:global(.scheme--dark) .list--ul {
+  color: var(--color-text-light);
+}
+
+/* -------------------------------------------- */
+/* Appearance                                   */
+/* -------------------------------------------- */
+
+.list--no-marker {
+  list-style: none;
+  padding: 0;
+
+  li::before {
+    display: none;
+  }
+}
+
+.list--body-1 {
+  font-family: var(--font-family-body);
+  font-size: clamp(
+    var(--font-size-handheld-body-1),
+    0.8864rem + 0.5682vw,
+    var(--font-size-body-1)
+  );
+  line-height: var(--line-height-body-1);
+  margin-bottom: var(--margin-bottom-body-1);
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.list--body-2 {
+  font-family: var(--font-family-body);
+  font-size: clamp(
+    var(--font-size-handheld-body-2),
+    0.8182rem + 0.2841vw,
+    var(--font-size-body-2)
+  );
+  line-height: var(--line-height-body-2);
+  margin-bottom: var(--margin-bottom-body-2);
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.list--body-3 {
+  font-family: var(--font-family-body);
+  font-size: clamp(
+    var(--font-size-handheld-body-3),
+    0.6932rem + 0.2841vw,
+    var(--font-size-body-3)
+  );
+  line-height: var(--line-height-body-3);
+  margin-bottom: var(--margin-bottom-body-3);
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+/* -------------------------------------------- */
+/* Alignment                                    */
+/* -------------------------------------------- */
+
+.list-inline {
+  display: flex;
+  flex-direction: row;
+  gap: var(--size-5);
+  padding: 0;
+}
+
+.list-inline--left {
+  justify-content: flex-start;
+}
+
+.list-inline--center {
+  justify-content: center;
+}
+
+.list-inline--right {
+  justify-content: flex-end;
+}

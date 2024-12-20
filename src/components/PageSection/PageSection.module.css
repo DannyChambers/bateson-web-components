@@ -1,0 +1,34 @@
+/* -------------------------------------------- */
+/*                                              */
+/* PageSection                                  */
+/* -> Styles                                    */
+/*                                              */
+/* -------------------------------------------- */
+
+.page-section {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: var(--size-8) 0;
+
+  @media (--min-breakpoint-md) {
+    padding: var(--size-20) 0;
+  }
+}
+
+/* -------------------------------------------- */
+/* Modifiers                                    */
+/* -------------------------------------------- */
+
+/* ----- Screen size----- */
+
+.page-section--halfscreen {
+  width: 100%;
+  min-height: 50vh;
+}
+
+.page-section--fullscreen {
+  width: 100%;
+  min-height: 100vh;
+}

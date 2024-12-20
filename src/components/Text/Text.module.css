@@ -1,0 +1,209 @@
+/* -------------------------------------------- */
+/*                                              */
+/* Text                                         */
+/* -> Styles                                    */
+/*                                              */
+/* -------------------------------------------- */
+
+/* -------------------------------------------- */
+/* Local custom properties                     */
+/* -------------------------------------------- */
+
+/* -------------------------------------------- */
+/* General                                   */
+/* -------------------------------------------- */
+
+.text {
+  font-family: var(--font-family-body);
+  color: var(--color-text-dark);
+  margin: 0;
+  text-decoration: none;
+  max-width: 75ch;
+}
+
+span.text {
+  display: block;
+}
+
+:global(.scheme--dark) .text {
+  color: var(--color-text-light);
+}
+
+/* -------------------------------------------- */
+/* Appearance                                   */
+/* -------------------------------------------- */
+
+.text--heading-1 {
+  font-size: clamp(
+    var(--font-size-handheld-heading-1),
+    2.3182rem + 3.4091vw,
+    var(--font-size-heading-1)
+  );
+  font-family: var(--font-family-heading);
+  font-weight: bold;
+  line-height: var(--line-height-heading-1);
+  margin-bottom: var(--margin-bottom-heading-1);
+}
+
+.text--heading-2 {
+  font-size: clamp(
+    var(--font-size-handheld-heading-2),
+    1.5682rem + 3.4091vw,
+    var(--font-size-heading-2)
+  );
+  font-family: var(--font-family-heading);
+  font-weight: bold;
+  line-height: var(--line-height-heading-2);
+  margin-bottom: var(--margin-bottom-heading-2);
+}
+
+.text--heading-3 {
+  font-size: clamp(
+    var(--font-size-handheld-heading-3),
+    1rem + 3.125vw,
+    var(--font-size-heading-3)
+  );
+  font-family: var(--font-family-heading);
+  font-weight: bold;
+  line-height: var(--line-height-heading-3);
+  margin-bottom: var(--margin-bottom-heading-3);
+}
+
+.text--heading-4 {
+  font-size: clamp(
+    var(--font-size-handheld-heading-4),
+    0.9773rem + 1.9886vw,
+    var(--font-size-heading-4)
+  );
+  font-family: var(--font-family-heading);
+  font-weight: bold;
+  line-height: var(--line-height-heading-4);
+  margin-bottom: var(--margin-bottom-heading-4);
+}
+
+.text--heading-5 {
+  font-size: clamp(
+    var(--font-size-handheld-heading-5),
+    0.8977rem + 1.1364vw,
+    var(--font-size-heading-5)
+  );
+  font-weight: bold;
+  line-height: var(--line-height-heading-5);
+  margin-bottom: var(--margin-bottom-heading-5);
+}
+
+.text--heading-6 {
+  font-size: clamp(
+    var(--font-size-handheld-heading-6),
+    0.7727rem + 1.1364vw,
+    var(--font-size-heading-6)
+  );
+  font-weight: bold;
+  line-height: var(--line-height-heading-6);
+  margin-bottom: var(--margin-bottom-heading-6);
+}
+
+.text--heading-7 {
+  font-size: clamp(
+    var(--font-size-handheld-heading-7),
+    0.7727rem + 1.1364vw,
+    var(--font-size-heading-7)
+  );
+  font-weight: bold;
+  line-height: var(--line-height-heading-7);
+  margin-bottom: var(--margin-bottom-heading-7);
+}
+
+.text--body-1 {
+  font-family: var(--font-family-body);
+  font-size: clamp(
+    var(--font-size-handheld-body-1),
+    0.8864rem + 0.5682vw,
+    var(--font-size-body-1)
+  );
+  line-height: var(--line-height-body-1);
+  margin-bottom: var(--margin-bottom-body-1);
+
+  &:last-of-type:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.text--body-2 {
+  font-family: var(--font-family-body);
+  font-size: clamp(
+    var(--font-size-handheld-body-2),
+    0.8182rem + 0.2841vw,
+    var(--font-size-body-2)
+  );
+  line-height: var(--line-height-body-2);
+  margin-bottom: var(--margin-bottom-body-2);
+
+  &:last-of-type:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.text--body-3 {
+  font-family: var(--font-family-body);
+  font-size: clamp(
+    var(--font-size-handheld-body-3),
+    0.6932rem + 0.2841vw,
+    var(--font-size-body-3)
+  );
+  line-height: var(--line-height-body-3);
+  margin-bottom: var(--margin-bottom-body-3);
+
+  &:last-of-type:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* -------------------------------------------- */
+/* Font override                                */
+/* -------------------------------------------- */
+
+.text--font-heading {
+  font-family: var(--font-family-heading);
+}
+
+.text--font-body {
+  font-family: var(--font-family-body);
+}
+
+/* -------------------------------------------- */
+/* Weight override                                */
+/* -------------------------------------------- */
+
+.text--weight-normal {
+  font-weight: normal;
+}
+
+.text--weight-bold {
+  font-weight: bold;
+}
+
+/* -------------------------------------------- */
+/* Alignment                                    */
+/* -------------------------------------------- */
+
+.text--center {
+  text-align: center;
+}
+
+.text--left {
+  text-align: left;
+}
+
+.text--right {
+  text-align: right;
+}
+
+/* -------------------------------------------- */
+/* Layout                                       */
+/* -------------------------------------------- */
+
+.text--no-layout {
+  margin: 0;
+  padding: 0;
+}

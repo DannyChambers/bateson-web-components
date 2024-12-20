@@ -1,0 +1,72 @@
+/* -------------------------------------------- */
+/* Checkbox                                     */
+/* -> Styles                                    */
+/* -------------------------------------------- */
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  font-family: var(--font-family-body);
+  padding: 0.5rem;
+  width: 100%;
+  box-sizing: border-box;
+  color: var(--brand-1);
+  outline: none;
+  max-width: 45ch;
+  transition: border-color 0.3s ease;
+}
+
+.checkbox--disabled {
+  cursor: not-allowed;
+  border-color: var(--brand-31);
+}
+
+.checkbox-input {
+  border: 1px solid var(--brand-31);
+  border-radius: var(--radius-sm);
+  margin-right: 0.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-color: var(--brand-4);
+  transition: border-color 0.3s ease;
+}
+
+.checkbox-input:checked {
+  background-color: var(--brand-15);
+  border-color: var(--brand-15);
+}
+
+.checkbox-input:focus {
+  border-color: var(--brand-15);
+}
+
+.checkbox-label {
+  color: var(--brand-1);
+}
+
+.checkbox--body-1 {
+  font-size: clamp(
+    var(--font-size-handheld-body-1),
+    0.8864rem + 0.5682vw,
+    var(--font-size-body-1)
+  );
+  line-height: var(--line-height-body-1);
+}
+
+.checkbox--body-2 {
+  font-size: clamp(
+    var(--font-size-handheld-body-2),
+    0.8182rem + 0.2841vw,
+    var(--font-size-body-2)
+  );
+  line-height: var(--line-height-body-2);
+}
+
+.checkbox--body-3 {
+  font-size: clamp(
+    var(--font-size-handheld-body-3),
+    0.6932rem + 0.2841vw,
+    var(--font-size-body-3)
+  );
+  line-height: var(--line-height-body-3);
+}

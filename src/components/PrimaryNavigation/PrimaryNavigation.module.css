@@ -1,0 +1,104 @@
+/* -------------------------------------------- */
+/*                                              */
+/* PrimaryNavigation                          */
+/* -> Styles                                    */
+/*                                              */
+/* -------------------------------------------- */
+
+.primary-navigation ul,
+.primary-sub-navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.primary-navigation > ul {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.primary-navigation-item,
+.primary-sub-navigation-item {
+  display: block;
+  font-weight: bold;
+  font-family: var(--font-family-body);
+  font-size: clamp(
+    var(--font-size-handheld-body-1),
+    0.8864rem + 0.5682vw,
+    var(--font-size-body-1)
+  );
+  line-height: var(--line-height-body-1);
+  margin-bottom: var(--size-5);
+  color: var(--color-text-dark);
+}
+
+.primary-navigation-item--spaced,
+.primary-sub-navigation-item--spaced {
+  margin-top: var(--size-8);
+}
+
+.primary-navigation-item a,
+.primary-sub-navigation a {
+  display: block;
+  color: var(--color-text-dark);
+  transition: color var(--transition-1);
+  text-decoration: none;
+}
+
+.primary-navigation-item--active a,
+.primary-sub-navigation-item--active a {
+  color: var(--brand-15);
+  pointer-events: none;
+}
+
+.primary-navigation-item a:hover,
+.primary-sub-navigation a:hover {
+  color: var(--brand-19);
+}
+
+.primary-sub-navigation ul {
+  padding: var(--size-4) 0 0 0;
+}
+
+.primary-sub-navigation-item {
+  font-size: clamp(
+    var(--font-size-handheld-body-3),
+    0.6932rem + 0.2841vw,
+    var(--font-size-body-3)
+  );
+  line-height: var(--line-height-body-3);
+  margin-bottom: var(--size-3);
+  color: var(--color-text-dark);
+}
+
+:global(.scheme--dark) {
+  .primary-navigation ul,
+  .primary-sub-navigation ul {
+    background: var(--brand-10);
+  }
+
+  .primary-navigation-item,
+  .primary-sub-navigation-item {
+    color: var(--color-text-light);
+  }
+
+  .primary-navigation-item a,
+  .primary-sub-navigation a {
+    color: var(--color-text-light);
+  }
+
+  .primary-navigation-item--active a,
+  .primary-sub-navigation-item--active a {
+    color: var(--brand-19);
+    pointer-events: none;
+  }
+
+  .primary-navigation-item a:hover,
+  .primary-sub-navigation a:hover {
+    color: var(--brand-19);
+  }
+
+  .primary-sub-navigation-item {
+    color: var(--color-text-light);
+  }
+}

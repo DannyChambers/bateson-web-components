@@ -1,0 +1,19 @@
+/* -------------------------------------------- */
+/*                                              */
+/* Stage                                        */
+/* -> Styles                                    */
+/*                                              */
+/* -------------------------------------------- */
+
+.stage {
+  background: var(--brand-6);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--size-4);
+}

@@ -1,0 +1,71 @@
+/* -------------------------------------------- */
+/*                                              */
+/* Card                                         */
+/* -> Styles                                    */
+/*                                              */
+/* -------------------------------------------- */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid var(--brand-31);
+  border-radius: var(--radius-sm);
+  background: var(--brand-4);
+  height: 100%;
+}
+
+.card__header {
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+  border-bottom: 1px solid var(--brand-33);
+
+  &.card__header--padded {
+    padding: var(--size-6);
+  }
+
+  .card-header__content {
+    position: realtive;
+    z-index: 2;
+  }
+}
+
+.card__body {
+  padding: var(--size-6) var(--size-6) 0 var(--size-6);
+}
+
+.card__footer {
+  padding: 0 var(--size-6) var(--size-6) var(--size-6);
+}
+
+/* -- Border radius -- */
+
+.card-border-radius-sm {
+  border-radius: var(--radius-sm);
+}
+
+.card-border-radius-md {
+  border-radius: var(--radius-md);
+}
+
+.card-border-radius-lg {
+  border-radius: var(--radius-lg);
+}
+
+/* ----- Image ----- */
+
+.card__image {
+  background-position: center;
+  background-size: cover;
+  flex-shrink: 0;
+  margin: 0;
+  width: 125px;
+
+  .card--vertical & {
+    height: 250px;
+    width: 100%;
+  }
+}

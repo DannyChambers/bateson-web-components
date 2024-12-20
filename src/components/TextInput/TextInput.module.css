@@ -1,0 +1,84 @@
+/* -------------------------------------------- */
+/* TextInput                                    */
+/* -> Styles                                    */
+/* -------------------------------------------- */
+
+.text-input-wrapper {
+  position: relative;
+}
+
+.text-input {
+  border-radius: var(--radius-sm);
+  font-family: var(--font-family-body);
+  border: 1px solid var(--brand-31);
+  padding: var(--size-4) var(--size-10) var(--size-4) var(--size-4);
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+  background-color: var(--brand-4);
+  color: var(--brand-1);
+  outline: none;
+}
+
+.text-input:focus {
+  border-color: var(--brand-15);
+}
+
+.text-input--disabled {
+  background-color: var(--brand-33);
+  border-color: var(--brand-31);
+  cursor: not-allowed;
+}
+
+.text-input--error {
+  border-color: var(--brand-41);
+}
+
+.text-input-error {
+  color: var(--brand-41);
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.input--icon {
+  display: flex;
+  align-items: center;
+}
+
+.input__password-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  color: var(--brand-17);
+}
+
+/* -- Modifers --*/
+
+.text-input--body-1 {
+  font-size: clamp(
+    var(--font-size-handheld-body-1),
+    0.8864rem + 0.5682vw,
+    var(--font-size-body-1)
+  );
+  line-height: var(--line-height-body-1);
+}
+
+.text-input--body-2 {
+  font-size: clamp(
+    var(--font-size-handheld-body-2),
+    0.8182rem + 0.2841vw,
+    var(--font-size-body-2)
+  );
+  line-height: var(--line-height-body-2);
+}
+
+.text-input--body-3 {
+  font-size: clamp(
+    var(--font-size-handheld-body-3),
+    0.6932rem + 0.2841vw,
+    var(--font-size-body-3)
+  );
+  line-height: var(--line-height-body-3);
+}

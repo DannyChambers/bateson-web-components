@@ -1,0 +1,151 @@
+/* -------------------------------------------- */
+/*                                              */
+/* Link                                         */
+/* -> Styles                                    */
+/*                                              */
+/* -------------------------------------------- */
+
+:global(a),
+.link,
+.link:active,
+.link:visited {
+  align-items: center;
+  color: var(--brand-17);
+  display: inline-flex;
+  font-family: var(--font-family-body);
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: var(--size-3);
+  transition: all var(--transition-0);
+
+  &:has(svg) {
+    gap: var(--size-4);
+  }
+
+  svg,
+  svg path {
+    fill: var(--brand-17);
+    stroke: var(--brand-17);
+    transition: all var(--transition-0);
+  }
+
+  &:hover {
+    color: var(--brand-17);
+    text-decoration-color: var(--brand-17);
+
+    svg,
+    svg path {
+      fill: var(--brand-17);
+      stroke: var(--brand-17);
+    }
+  }
+}
+
+:global(.scheme--dark) .link {
+  color: var(--brand-4);
+
+  svg,
+  svg path {
+    fill: var(--brand-4);
+    stroke: var(--brand-4);
+  }
+
+  &:hover {
+    color: var(--brand-6);
+    text-decoration-color: var(--brand-6);
+
+    svg,
+    svg path {
+      fill: var(--brand-6);
+      stroke: var(--brand-6);
+    }
+  }
+}
+
+.link:focus-visible {
+  outline: 2px solid var(--brand-17);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.link--stretch {
+  &::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* -------------------------------------------- */
+/* Appearance                                   */
+/* -------------------------------------------- */
+
+.link--body-1 {
+  font-size: clamp(
+    var(--font-size-handheld-body-1),
+    0.8864rem + 0.5682vw,
+    var(--font-size-body-1)
+  );
+  line-height: var(--line-height-body-1);
+}
+
+.link--body-2 {
+  font-size: clamp(
+    var(--font-size-handheld-body-2),
+    0.8182rem + 0.2841vw,
+    var(--font-size-body-2)
+  );
+  line-height: var(--line-height-body-2);
+}
+
+.link--body-3 {
+  font-size: clamp(
+    var(--font-size-handheld-body-3),
+    0.6932rem + 0.2841vw,
+    var(--font-size-body-3)
+  );
+  line-height: var(--line-height-body-3);
+}
+
+.link-group {
+  display: flex;
+  gap: var(--spacing-3);
+}
+
+.link-group--left {
+  justify-content: flex-start;
+}
+
+.link-group--center {
+  justify-content: center;
+}
+
+.link-group--right {
+  justify-content: flex-end;
+}
+
+/* Add these new classes */
+.link--icon-only .link__text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.link__hit-area {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,414 @@
+/* --------------------------------------------
+//
+// layout/themes/base.css
+// -> 
+//
+-------------------------------------------- */
+
+/* -------------------------------------------- */
+/* Local Custom properties                      */
+/* -------------------------------------------- */
+
+:root {
+  --maximum-page-width: var(--breakpoint-xl);
+}
+
+/* --------------------------------------------
+// General
+-------------------------------------------- */
+
+.layout {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  list-style: none;
+  margin: 0;
+  gap: var(--size-6);
+}
+
+.layout--block {
+  display: block;
+}
+
+.layout__column {
+  min-height: 0;
+  min-width: 0;
+}
+
+/* Wrapper --------------------------------------------*/
+
+.layout--wrapper {
+  display: block;
+  position: relative;
+
+  @media (--min-breakpoint-lg) {
+    margin-right: 280px;
+  }
+}
+
+/* Container --------------------------------------------*/
+
+.layout--container {
+  display: block;
+  padding: 0 var(--size-8);
+  position: relative;
+  height: 100%;
+  z-index: 1;
+
+  @media (--min-breakpoint-sm) {
+    padding: 0 var(--size-12);
+  }
+
+  @media (--min-breakpoint-md) {
+    padding: 0 var(--size-14) 0 var(--size-20);
+  }
+}
+
+.layout--55,
+.layout--65,
+.layout--75,
+.layout--85 {
+  display: block;
+}
+
+/* 50_50 --------------------------------------------*/
+
+.layout--50_50 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.layout--50_50.layout--content-reverse :first-child {
+  order: 2;
+}
+
+.layout--50_50.layout--content-reverse :nth-child(2) {
+  order: 1;
+}
+
+/* 66_33 --------------------------------------------*/
+
+.layout--66_33 {
+  display: grid;
+  grid-template-columns: calc(66.7% - 0.7rem) calc(33.3% - 1.3rem);
+}
+
+.layout--66_33.layout--content-reverse :first-child {
+  order: 2;
+}
+
+.layout--66_33.layout--content-reverse :nth-child(2) {
+  order: 1;
+}
+
+/* 40_60 --------------------------------------------*/
+
+.layout--40_60 {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+}
+
+.layout--40_60.layout--content-reverse :first-child {
+  order: 2;
+}
+
+.layout--40_60.layout--content-reverse :nth-child(2) {
+  order: 1;
+}
+
+/* 60_40 --------------------------------------------*/
+
+.layout--60_40 {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+}
+
+.layout--60_40.layout--content-reverse :first-child {
+  order: 2;
+}
+
+.layout--60_40.layout--content-reverse :nth-child(2) {
+  order: 1;
+}
+
+/* 48_52 --------------------------------------------*/
+
+.layout--48_52 {
+  display: grid;
+  grid-template-columns: 12fr 13fr;
+}
+
+.layout--48_52.layout--content-reverse :first-child {
+  order: 2;
+}
+
+.layout--48_52.layout--content-reverse :nth-child(2) {
+  order: 1;
+}
+
+/* 52_48 --------------------------------------------*/
+
+.layout--52_48 {
+  display: grid;
+  grid-template-columns: 13fr 12fr;
+}
+
+.layout--52_48.layout--content-reverse :first-child {
+  order: 2;
+}
+
+.layout--52_48.layout--content-reverse :nth-child(2) {
+  order: 1;
+}
+
+/* 70_30 --------------------------------------------*/
+
+.layout--70_30 {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+}
+
+.layout--70_30.layout--content-reverse :first-child {
+  order: 2;
+}
+
+.layout--70_30.layout--content-reverse :nth-child(2) {
+  order: 1;
+}
+
+/* 80_20 --------------------------------------------*/
+
+.layout--80_20 {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+}
+
+.layout--80_20.layout--content-reverse :first-child {
+  order: 2;
+}
+
+.layout--80_20.layout--content-reverse :nth-child(2) {
+  order: 1;
+}
+
+/* 33_33_33 --------------------------------------------*/
+
+.layout--33_33_33 {
+  display: grid;
+  grid-template-columns:
+    calc(33% - var(--size-4)) calc(33% - var(--size-4))
+    calc(33% - var(--size-4));
+}
+
+/* 25_25_25_25 -----------------------------------------*/
+
+.layout--25_25_25_25 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Stack Small (stack-xs) (If this prop is set, the layout will stack at or  
+  below --breakpoint-xs) -------------------------------------------*/
+
+@media (--max-breakpoint-xs) {
+  .layout--stack-xs.layout--50_50,
+  .layout--stack-xs.layout--52_48,
+  .layout--stack-xs.layout--48_52,
+  .layout--stack-xs.layout--60_40,
+  .layout--stack-xs.layout--40_60,
+  .layout--stack-xs.layout--66_33,
+  .layout--stack-xs.layout--70_30,
+  .layout--stack-xs.layout--80_20,
+  .layout--stack-xs.layout--20_80,
+  .layout--stack-xs.layout--33_33_33,
+  .layout--stack-xs.layout--25_25_25_25 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Stack Small (stack-sm) (If this prop is set, the layout will stack at or  
+  below --breakpoint-sm) -------------------------------------------*/
+
+@media (--max-breakpoint-sm) {
+  .layout--stack-sm.layout--50_50,
+  .layout--stack-sm.layout--52_48,
+  .layout--stack-sm.layout--48_52,
+  .layout--stack-sm.layout--60_40,
+  .layout--stack-sm.layout--40_60,
+  .layout--stack-sm.layout--66_33,
+  .layout--stack-sm.layout--70_30,
+  .layout--stack-sm.layout--80_20,
+  .layout--stack-xs.layout--20_80,
+  .layout--stack-xs.layout--33_33_33,
+  .layout--stack-sm.layout--25_25_25_25 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Stack Medium (stack-md) (If this prop is set, the layout will stack at or  
+  below --breakpoint-md) -------------------------------------------*/
+
+@media (--max-breakpoint-md) {
+  .layout--stack-md.layout--50_50,
+  .layout--stack-md.layout--52_48,
+  .layout--stack-md.layout--48_52,
+  .layout--stack-md.layout--60_40,
+  .layout--stack-md.layout--40_60,
+  .layout--stack-md.layout--66_33,
+  .layout--stack-md.layout--70_30,
+  .layout--stack-md.layout--80_20,
+  .layout--stack-md.layout--20_80,
+  .layout--stack-md.layout--33_33_33,
+  .layout--stack-md.layout--25_25_25_25 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Gap -----------------------------------------*/
+
+.layout--gap-none {
+  gap: 0;
+}
+
+.layout--gap-sm {
+  gap: var(--size-4);
+}
+
+.layout--gap-md {
+  gap: var(--size-6);
+}
+
+.layout--gap-lg {
+  gap: var(--size-8);
+}
+
+.layout--gap-xl {
+  gap: var(--size-10);
+}
+
+/* top-gutter -------------------------------*/
+
+.layout--top-gutter-sm {
+  display: block;
+  margin-top: var(--size-4);
+}
+
+.layout--top-gutter-md {
+  display: block;
+  margin-top: var(--size-5);
+}
+
+.layout--top-gutter-lg {
+  display: block;
+  margin-top: var(--size-6);
+}
+
+.layout--top-gutter-xl {
+  display: block;
+  margin-top: var(--size-7);
+}
+
+/* Bottom gutter -------------------------------*/
+
+.layout--bottom-gutter-sm {
+  display: block;
+  margin-bottom: var(--size-4);
+}
+
+.layout--bottom-gutter-md {
+  display: block;
+  margin-bottom: var(--size-5);
+}
+
+.layout--bottom-gutter-lg {
+  display: block;
+  margin-bottom: var(--size-6);
+}
+
+.layout--bottom-gutter-xl {
+  display: block;
+  margin-bottom: var(--size-7);
+}
+
+/* Vertical and Horizontal alignment -------------------------------*/
+
+.layout--verticalAlign-top,
+.layout--verticalAlign-middle,
+.layout--verticalAlign-bottom,
+.layout--horizontalAlign-left,
+.layout--horizontalAlign-middle,
+.layout--horizontalAlign-right {
+  display: flex;
+  flex-flow: column wrap;
+  height: 100%;
+}
+
+/* Vertical alignment -------------------------------*/
+
+.layout--verticalAlign-top {
+  justify-content: flex-start;
+}
+
+.layout--verticalAlign-middle {
+  justify-content: center;
+}
+
+.layout--verticalAlign-bottom {
+  justify-content: flex-end;
+}
+
+/* Horizontal alignment -------------------------------*/
+
+.layout--horizontalAlign-left {
+  align-items: flex-start;
+}
+
+.layout--horizontalAlign-middle {
+  align-content: center;
+}
+
+.layout--horizontalAlign-right {
+  align-content: flex-end;
+}
+
+/* --------------------------------------------
+  // At and above breakpoint 1280px
+  -------------------------------------------- */
+
+@media (--min-breakpoint-lg) {
+  /* 50 --------------------------------------------*/
+
+  .layout--55 {
+    width: 55%;
+    margin: 0 auto;
+  }
+
+  /* 60 --------------------------------------------*/
+
+  .layout--65 {
+    width: 65%;
+    margin: 0 auto;
+  }
+
+  /* 70 --------------------------------------------*/
+
+  .layout--75 {
+    width: 75%;
+    margin: 0 auto;
+  }
+
+  /* 85 --------------------------------------------*/
+
+  .layout--85 {
+    width: 85%;
+    margin: 0 auto;
+  }
+}
+
+/* Show grid utility -----------------------------------------*/
+
+.layout--show-grid .layout__column {
+  gap: 0;
+  height: 100%;
+  background: rgb(135 206 235 / 60%);
+  padding: 30px;
+}

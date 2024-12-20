@@ -1,0 +1,103 @@
+/* --------------------------------------------
+/*                                              */
+/* Table                                        */
+/* -> Styles                                    */
+/*                                              */
+/* -------------------------------------------- */
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table thead {
+  display: none;
+  font-family: var(--font-family-body);
+}
+
+.table tr {
+  display: block;
+}
+
+.table th,
+.table td {
+  display: block;
+  padding: var(--size-4);
+  text-align: left;
+  border-bottom: 1px solid var(--brand-31);
+  font-family: var(--font-family-body);
+}
+
+.table td::before {
+  content: attr(data-header);
+  display: block;
+  font-family: var(--font-family-body);
+  font-weight: bold;
+}
+
+.table tr:nth-child(even) {
+  background-color: var(--brand-33-33);
+}
+
+@media (--min-breakpoint-sm) {
+  .table tr {
+    display: table-row;
+  }
+
+  .table th,
+  .table td {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .table td::before {
+    display: none;
+  }
+
+  .table thead {
+    display: table-header-group;
+  }
+
+  .table--noheaders thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+}
+
+/* -- Modifiers -- */
+
+.table--body-1 {
+  font-family: var(--font-family-body);
+  font-size: clamp(
+    var(--font-size-handheld-body-1),
+    0.8864rem + 0.5682vw,
+    var(--font-size-body-1)
+  );
+  line-height: var(--line-height-body-1);
+}
+
+.table--body-2 {
+  font-family: var(--font-family-body);
+  font-size: clamp(
+    var(--font-size-handheld-body-2),
+    0.8182rem + 0.2841vw,
+    var(--font-size-body-2)
+  );
+  line-height: var(--line-height-body-2);
+}
+
+.table--body-3 {
+  font-family: var(--font-family-body);
+  font-size: clamp(
+    var(--font-size-handheld-body-3),
+    0.6932rem + 0.2841vw,
+    var(--font-size-body-3)
+  );
+  line-height: var(--line-height-body-3);
+}

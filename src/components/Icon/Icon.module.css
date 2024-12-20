@@ -1,0 +1,32 @@
+/* -------------------------------------------- */
+/*                                              */
+/* Icon                                         */
+/* -> Styles                                    */
+/*                                              */
+/* -------------------------------------------- */
+
+.icon {
+  fill: currentcolor;
+  display: inline-block;
+  vertical-align: middle;
+
+  path {
+    fill: currentcolor;
+    stroke: currentcolor;
+  }
+}
+
+.icon--sm {
+  width: 16px;
+  height: 16px;
+}
+
+.icon--md {
+  width: 24px;
+  height: 24px;
+}
+
+.icon--lg {
+  width: 32px;
+  height: 32px;
+}

@@ -1,0 +1,47 @@
+/* -------------------------------------------- */
+/*                                              */
+/* PairedList                                   */
+/* -> Styles                                    */
+/*                                              */
+/* -------------------------------------------- */
+
+.paired-list {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: var(--size-4) var(--size-6);
+  font-family: var(--font-family-body);
+  margin-bottom: var(--size-4);
+}
+
+.paired-list--body-1 {
+  font-size: clamp(
+    var(--font-size-handheld-body-1),
+    0.8864rem + 0.5682vw,
+    var(--font-size-body-1)
+  );
+}
+
+.paired-list--body-2 {
+  font-size: clamp(
+    var(--font-size-handheld-body-2),
+    0.8182rem + 0.2841vw,
+    var(--font-size-body-2)
+  );
+}
+
+.paired-list--body-3 {
+  font-size: clamp(
+    var(--font-size-handheld-body-3),
+    0.6932rem + 0.2841vw,
+    var(--font-size-body-3)
+  );
+}
+
+.paired-list-term {
+  font-weight: bold;
+  margin: 0 0 var(--size-4) 0;
+}
+
+.paired-list-definition {
+  margin: 0 0 var(--size-4) 0;
+}

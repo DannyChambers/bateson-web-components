@@ -1,0 +1,19 @@
+/* -------------------------------------------- */
+/* Duration                                     */
+/* -------------------------------------------- */
+
+/* ----- Time ----- */
+
+:root {
+  --time-1: 0.1s;
+  --time-2: 0.2s;
+  --time-3: 0.4s;
+  --time-4: 0.8s;
+
+  /* ----- Transition ----- */
+
+  --transition-1: var(--time-1) ease-in 0s;
+  --transition-2: var(--time-2) ease-in 0s;
+  --transition-3: var(--time-3) ease-in 0s;
+  --transition-4: var(--time-4) ease-in 0s;
+}

@@ -1,0 +1,64 @@
+/* -------------------------------------------- */
+/*                                              */
+/* Avatar                                       */
+/* -> Styles                                    */
+/*                                              */
+/* -------------------------------------------- */
+.avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--size-4);
+  position: relative;
+}
+
+.avatar_image {
+  border-radius: 50%;
+  background-color: lightgray;
+}
+
+.avatar_image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.avatar_button {
+  position: absolute;
+  top: var(--size-7);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/*-- Modifiers -- */
+
+.avatar--xs .avatar_image,
+.avatar--xs .avatar_image img {
+  width: var(--size-9);
+  height: var(--size-9);
+}
+
+.avatar--sm .avatar_image,
+.avatar--sm .avatar_image img {
+  width: var(--size-12);
+  height: var(--size-12);
+}
+
+.avatar--md .avatar_image,
+.avatar--md .avatar_image img {
+  width: var(--size-15);
+  height: var(--size-15);
+}
+
+.avatar--lg .avatar_image,
+.avatar--lg .avatar_image img {
+  width: var(--size-18);
+  height: var(--size-18);
+}
+
+.avatar--xl .avatar_image,
+.avatar--xl .avatar_image img {
+  width: var(--size-20);
+  height: var(--size-20);
+}

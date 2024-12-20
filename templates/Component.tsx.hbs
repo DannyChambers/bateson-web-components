@@ -1,0 +1,41 @@
+// --------------------------------------------
+//
+// {{pascalCase name}}
+// -> Component
+//
+// --------------------------------------------
+
+// --------------------------------------------
+// Imports
+// --------------------------------------------
+
+import clsx from "clsx";
+import styles from "./{{pascalCase name}}.module.css";
+
+// --------------------------------------------
+// Types
+// --------------------------------------------
+
+export interface {{pascalCase name}}Props {
+  // Define your component props here
+  children: React.ReactNode;
+}
+
+// --------------------------------------------
+// Component
+// --------------------------------------------
+
+function {{pascalCase name}}({ children }: {{pascalCase name}}Props) {
+  return (
+    <div className={clsx(styles["{{camelCase name}}"])}>
+      {/* Your component JSX goes here */}
+      {children}
+    </div>
+  );
+}
+
+// --------------------------------------------
+// Exports
+// --------------------------------------------
+
+export default {{pascalCase name}};

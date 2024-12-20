@@ -1,0 +1,134 @@
+/* -------------------------------------------- */
+/* Typography                                     */
+/* -------------------------------------------- */
+
+/* ----- Fonts ----- */
+
+/* Italiana */
+
+@font-face {
+  font-family: Italiana;
+  src:
+    local("Italiana"),
+    url("@/assets/fonts/italiana-regular.woff2") format("woff2"),
+    url("@/assets/fonts/italiana-regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: optional;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Inter */
+
+@font-face {
+  font-family: Inter;
+  src:
+    local("Inter"),
+    url("@/assets/fonts/inter-regular.woff") format("woff"),
+    url("@/assets/fonts/inter-regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: optional;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  /* ----- General ----- */
+
+  --font-family-heading: "Italiana", georgia, serif;
+  --font-family-body: "Inter", arial, sans-serif;
+  --color-text-dark: var(--color-black);
+  --color-text-light: var(--color-white);
+
+  /* ----- Heading 1 ----- */
+
+  --font-size-heading-1: 4.5rem;
+  --font-size-handheld-heading-1: 3rem;
+  --line-height-heading-1: 1.2;
+  --line-height-handheld-heading-1: 1.2;
+  --margin-bottom-heading-1: 2rem;
+  --margin-bottom-handheld-heading-1: 1.5rem;
+
+  /* ----- Heading 2 ----- */
+
+  --font-size-heading-2: 3.75rem;
+  --font-size-handheld-heading-2: 2.25rem;
+  --line-height-heading-2: 1.25;
+  --line-height-handheld-heading-2: 1.25;
+  --margin-bottom-heading-2: 1.75rem;
+  --margin-bottom-handheld-heading-2: 1.25rem;
+
+  /* ----- Heading 3 ----- */
+
+  --font-size-heading-3: 3rem;
+  --font-size-handheld-heading-3: 1.625rem;
+  --line-height-heading-3: 1.3;
+  --line-height-handheld-heading-3: 1.3;
+  --margin-bottom-heading-3: 1.5rem;
+  --margin-bottom-handheld-heading-3: 1rem;
+
+  /* ----- Heading 4 ----- */
+
+  --font-size-heading-4: 2.25rem;
+  --font-size-handheld-heading-4: 1.375rem;
+  --line-height-heading-4: 1.35;
+  --line-height-handheld-heading-4: 1.35;
+  --margin-bottom-heading-4: 1.25rem;
+  --margin-bottom-handheld-heading-4: 0.75rem;
+
+  /* ----- Heading 5 ----- */
+
+  --font-size-heading-5: 1.625rem;
+  --font-size-handheld-heading-5: 1.125rem;
+  --line-height-heading-5: 1.4;
+  --line-height-handheld-heading-5: 1.4;
+  --margin-bottom-heading-5: 1rem;
+  --margin-bottom-handheld-heading-5: 0.5rem;
+
+  /* ----- Heading 6 ----- */
+
+  --font-size-heading-6: 1.5rem;
+  --font-size-handheld-heading-6: 1rem;
+  --line-height-heading-6: 1.5;
+  --line-height-handheld-heading-6: 1.5;
+  --margin-bottom-heading-6: 0.75rem;
+  --margin-bottom-handheld-heading-6: 0.5rem;
+
+  /* ----- Heading 7 ----- */
+
+  --font-size-heading-7: 1.2rem;
+  --font-size-handheld-heading-7: 0.8rem;
+  --line-height-heading-7: 1.6;
+  --line-height-handheld-heading-7: 1.6;
+  --margin-bottom-heading-7: 0.75rem;
+  --margin-bottom-handheld-heading-7: 0.5rem;
+
+  /* ----- Body 1 ----- */
+
+  --font-size-body-1: 1.25rem;
+  --font-size-handheld-body-1: 1rem;
+  --line-height-body-1: 1.5;
+  --line-height-handheld-body-1: 1.5;
+  --margin-bottom-body-1: 1rem;
+  --margin-bottom-handheld-body-1: 0.75rem;
+
+  /* ----- Body 2 ----- */
+
+  --font-size-body-2: 1rem;
+  --font-size-handheld-body-2: 0.875rem;
+  --line-height-body-2: 1.6;
+  --line-height-handheld-body-2: 1.6;
+  --margin-bottom-body-2: 1rem;
+  --margin-bottom-handheld-body-2: 0.75rem;
+
+  /* ----- Body 3 ----- */
+
+  --font-size-body-3: 0.875rem;
+  --font-size-handheld-body-3: 0.75rem;
+  --line-height-body-3: 1.7;
+  --line-height-handheld-body-3: 1.7;
+  --margin-bottom-body-3: 0.875rem;
+  --margin-bottom-handheld-body-3: 0.5rem;
+}

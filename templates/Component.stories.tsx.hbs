@@ -1,0 +1,43 @@
+// --------------------------------------------
+//
+// {{pascalCase name}}
+// -> Stories
+//
+// --------------------------------------------
+
+// --------------------------------------------
+// Imports
+// --------------------------------------------
+
+import { Meta, StoryObj } from "@storybook/react";
+import {{pascalCase name}}, { {{pascalCase name}}Props } from "./{{pascalCase name}}";
+
+// --------------------------------------------
+// Stories
+// --------------------------------------------
+
+// ----- Setup ----- //
+
+const meta: Meta<{{pascalCase name}}Props> = {
+  title: "{{pascalCase type}}/{{pascalCase name}}",
+  component: {{pascalCase name}},
+  argTypes: {
+    // Define your arg types here
+    children: {
+      control: "text",
+    },
+  },
+};
+
+export default meta;
+
+// ----- Individual Stories ----- //
+
+type Story = StoryObj<{{pascalCase name}}Props>;
+
+export const Default: Story = {
+  args: {
+    // Define your args here
+    children: "{{pascalCase name}} component",
+  },
+};
