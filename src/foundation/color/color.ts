@@ -253,7 +253,7 @@ export const color = {
       alias: "--brand-42",
     },
   },
-  DesignTechnologist: {
+  EngineeredArts: {
     brand1: {
       name: "black",
       value: "rgba(10, 10, 10, 1)",
