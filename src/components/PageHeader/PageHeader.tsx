@@ -30,7 +30,7 @@ export interface PageHeaderProps {
 function PageHeader({ children }: PageHeaderProps) {
   return (
     <div data-component="PageHeader" className={clsx(styles["page-header"])}>
-      <Layout container>{children}</Layout>
+      {children}
     </div>
   );
 }
