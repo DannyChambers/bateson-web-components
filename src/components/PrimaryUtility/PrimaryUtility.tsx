@@ -1,6 +1,6 @@
 // --------------------------------------------
 //
-// PageFooter
+// PrimaryUtility
 // -> Component
 //
 // --------------------------------------------
@@ -9,31 +9,35 @@
 // Imports
 // --------------------------------------------
 
+import React from "react";
 import clsx from "clsx";
-import styles from "./PageFooter.module.css";
+import styles from "./PrimaryUtility.module.css";
 
 // --------------------------------------------
 // Types
 // --------------------------------------------
 
-export interface PageFooterProps {
-  // Define your component props here
+export interface PrimaryUtilityProps {
   children: React.ReactNode;
-  backgroundColor?: string;
+  align?: "left" | "right" | "center";
 }
 
 // --------------------------------------------
 // Component
 // --------------------------------------------
 
-function PageFooter({ children, backgroundColor }: PageFooterProps) {
+function PrimaryUtility({ children, align = "left" }: PrimaryUtilityProps) {
   return (
     <div
-      data-component="PageFooter"
-      className={clsx(styles["page-footer"])}
-      style={{ backgroundColor }}
+      data-component="PrimaryUtility"
+      className={clsx(
+        styles["primary-utility"],
+        styles[`primary-utility--align-${align}`],
+      )}
     >
-      <div className={clsx(styles["page-footer-container"])}>{children}</div>
+      {React.Children.map(children, child => (
+        <div className={styles["primary-utility__item"]}>{child}</div>
+      ))}
     </div>
   );
 }
@@ -42,4 +46,4 @@ function PageFooter({ children, backgroundColor }: PageFooterProps) {
 // Exports
 // --------------------------------------------
 
-export default PageFooter;
+export default PrimaryUtility;

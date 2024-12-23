@@ -6,26 +6,29 @@
 /* -------------------------------------------- */
 
 .button {
-  --primary-button-background-color: var(--brand-17);
-  --primary-button-background-color-hover: var(--brand-15);
-  --primary-button-border-color: var(--brand-17);
-  --primary-button-border-color-hover: var(--brand-15);
-  --primary-button-color: var(--brand-4);
-  --primary-button-color-hover: var(--brand-6);
-  --secondary-button-background-color: transparent;
-  --secondary-button-background-color--hover: transparent;
-  --secondary-button-border-color: var(--brand-17);
-  --secondary-button-border-color-hover: var(--brand-15);
-  --secondary-button-color: var(--brand-17);
-  --secondary-button-color-hover: var(--brand-15);
-  --tertiary-button-color: var(--brand-17);
-  --tertiary-button-color-hover: var(--brand-15);
+  --primary-button-background-color: var(--brand-1);
+  --primary-button-background-color-hover: var(--brand-2);
+  --primary-button-border-color: var(--brand-1);
+  --primary-button-border-color-hover: var(--brand-2);
+  --primary-button-color: var(--brand-7);
+  --primary-button-color-hover: var(--brand-4);
+  --secondary-button-background-color: var(--brand-7);
+  --secondary-button-background-color-hover: var(--brand-4);
+  --secondary-button-border-color: var(--brand-7);
+  --secondary-button-border-color-hover: var(--brand-4);
+  --secondary-button-color: var(--brand-1);
+  --secondary-button-color-hover: var(--brand-2);
+  --tertiary-button-background-color: transparent;
+  --tertiary-button-background-color--hover: transparent;
+  --tertiary-button-border-color: transparent;
+  --tertiary-button-border-color-hover: transparent;
+  --tertiary-button-color: var(--brand-7);
+  --tertiary-button-color-hover: var(--brand-4);
   --button-underline-offset: var(--size-3);
 
   all: initial;
   align-items: center;
   appearance: none;
-  border-radius: var(--radius-sm);
   border: 2px solid transparent;
   display: inline-flex;
   font-family: var(--font-family-body);
@@ -122,7 +125,7 @@
 }
 
 .button--secondary {
-  background: transparent;
+  background: var(--secondary-button-background-color);
   border-color: var(--secondary-button-border-color);
   color: var(--secondary-button-color);
 
@@ -133,7 +136,8 @@
   }
 
   &:is(:hover, :focus-visible) {
-    border-color: var(--secondary-button-color-hover);
+    background: var(--secondary-button-background-color-hover);
+    border-color: var(--secondary-button-border-color-hover);
     color: var(--secondary-button-color-hover);
 
     svg,
@@ -144,10 +148,9 @@
   }
 }
 
-.button--tertiary,
-:global(.scheme--light) .button--tertiary {
-  background: transparent;
-  border-color: transparent;
+.button--tertiary {
+  background: var(--tertiary-button-background-color);
+  border-color: var(--tertiary-button-border-color);
   color: var(--tertiary-button-color);
   padding: 0;
 
@@ -176,33 +179,6 @@
     svg path {
       fill: var(--tertiary-button-color-hover);
       stroke: var(--tertiary-button-color-hover);
-    }
-  }
-}
-
-:global(.scheme--dark) {
-  .button--tertiary {
-    color: var(--brand-4);
-
-    svg,
-    svg path {
-      fill: var(--brand-4);
-      stroke: var(--brand-4);
-    }
-
-    &:is(:hover, :focus-visible) {
-      border-color: transparent;
-      color: var(--brand-6);
-
-      .button__text {
-        text-decoration-color: var(--brand-6);
-      }
-
-      svg,
-      svg path {
-        fill: var(--brand-6);
-        stroke: var(--brand-6);
-      }
     }
   }
 }
@@ -270,6 +246,20 @@
   &.button--tertiary {
     padding: 0;
   }
+}
+
+/* ----- Layout ----- */
+
+.button--no-layout {
+  padding: 0;
+  line-height: normal;
+  min-height: 0;
+}
+
+/* ----- Capitalize ----- */
+
+.button--capitalize {
+  text-transform: uppercase;
 }
 
 /* -------------------------------------------- */

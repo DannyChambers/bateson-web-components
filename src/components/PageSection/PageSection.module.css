@@ -6,14 +6,35 @@
 /* -------------------------------------------- */
 
 .page-section {
-  background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
   position: relative;
   padding: var(--size-8) 0;
+  overflow: hidden;
 
   @media (--min-breakpoint-md) {
-    padding: var(--size-20) 0;
+    padding: var(--size-12) 0;
+  }
+
+  &.page-section--video {
+    padding-top: 0;
+
+    @media (--min-breakpoint-md) {
+      padding-top: var(--size-12);
+    }
+
+    .page-section__background-video {
+      width: 100%;
+
+      @media (--min-breakpoint-md) {
+        position: absolute;
+        inset: 0 0 0 50%;
+        z-index: 0;
+        object-fit: cover;
+        transform: translateX(-50%);
+        width: auto;
+        height: 100%;
+      }
+    }
   }
 }
 
@@ -21,14 +42,103 @@
 /* Modifiers                                    */
 /* -------------------------------------------- */
 
-/* ----- Screen size----- */
+/* ----- Background images position----- */
 
-.page-section--halfscreen {
-  width: 100%;
-  min-height: 50vh;
+@media (--min-breakpoint-sm) {
+  .page-section-backgroundPosition--topLeft,
+  .page-section-backgroundPosition--topRight,
+  .page-section-backgroundPosition--bottomRight,
+  .page-section-backgroundPosition--bottomLeft,
+  .page-section-backgroundPosition--center,
+  .page-backgroundPosition--cover {
+    padding-top: var(--size-12);
+  }
+
+  .page-section-backgroundPosition--topLeft {
+    background-position: 0 0;
+    background-size: auto 90%;
+  }
+
+  .page-section-backgroundPosition--topRight {
+    background-position: right -60px bottom 0;
+    background-size: auto 90%;
+  }
+
+  .page-section-backgroundPosition--bottomRight {
+    background-position: right 0 bottom 0;
+    background-size: auto 90%;
+  }
+
+  .page-section-backgroundPosition--bottomLeft {
+    background-position: left -60px bottom 0;
+    background-size: auto 90%;
+  }
+
+  .page-section-backgroundPosition--center {
+    background-position: center;
+    background-size: auto 90%;
+  }
+
+  .page-backgroundPosition--cover {
+    background-position: center;
+    background-size: cover;
+  }
 }
 
-.page-section--fullscreen {
-  width: 100%;
-  min-height: 100vh;
+@media (--min-breakpoint-md) {
+  .page-section-backgroundPosition--topLeft {
+    background-position: 0 0;
+    background-size: auto 90%;
+  }
+
+  .page-section-backgroundPosition--topRight {
+    background-position: right 0 0;
+    background-size: auto 90%;
+  }
+
+  .page-section-backgroundPosition--bottomRight {
+    background-position: right 0 bottom 0;
+    background-size: auto 90%;
+  }
+
+  .page-section-backgroundPosition--bottomLeft {
+    background-position: left 0 bottom 0;
+    background-size: auto 90%;
+  }
+}
+
+@media (--min-breakpoint-lg) {
+  .page-section-backgroundPosition--topLeft {
+    background-position: var(--size-12) 0;
+  }
+
+  .page-section-backgroundPosition--topRight {
+    background-position: right var(--size-12) 0;
+  }
+
+  .page-section-backgroundPosition--bottomRight {
+    background-position: right var(--size-12) bottom 0;
+  }
+
+  .page-section-backgroundPosition--bottomLeft {
+    background-position: left var(--size-12) bottom 0;
+  }
+}
+
+/* ----- Screen size----- */
+
+@media (--min-breakpoint-sm) {
+  .page-section--halfscreen {
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .page-section--fullscreen {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
 }

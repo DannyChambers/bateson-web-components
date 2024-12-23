@@ -5,14 +5,6 @@
 //
 -------------------------------------------- */
 
-/* -------------------------------------------- */
-/* Local Custom properties                      */
-/* -------------------------------------------- */
-
-:root {
-  --maximum-page-width: var(--breakpoint-xl);
-}
-
 /* --------------------------------------------
 // General
 -------------------------------------------- */
@@ -38,10 +30,11 @@
 
 .layout--wrapper {
   display: block;
+  padding-top: var(--size-13);
   position: relative;
 
-  @media (--min-breakpoint-lg) {
-    margin-right: 280px;
+  @media (--min-breakpoint-md) {
+    padding-top: 0;
   }
 }
 
@@ -49,17 +42,20 @@
 
 .layout--container {
   display: block;
+  width: 100%;
+  max-width: var(--maximum-page-width);
   padding: 0 var(--size-8);
   position: relative;
   height: 100%;
+  margin: 0 auto;
   z-index: 1;
 
-  @media (--min-breakpoint-sm) {
-    padding: 0 var(--size-12);
+  @media (--min-breakpoint-md) {
+    padding: 0 var(--size-10);
   }
 
-  @media (--min-breakpoint-md) {
-    padding: 0 var(--size-14) 0 var(--size-20);
+  @media (--min-breakpoint-lg) {
+    padding: 0 var(--size-6);
   }
 }
 
@@ -206,7 +202,64 @@
   grid-template-columns: repeat(4, 1fr);
 }
 
-/* Stack Small (stack-xs) (If this prop is set, the layout will stack at or  
+/* Pair XSmall (pair-xs) (If this prop is set, the layout will pair at or  
+  below --breakpoint-xs) -------------------------------------------*/
+
+@media (--max-breakpoint-xs) {
+  .layout--pair-xs.layout--50_50,
+  .layout--pair-xs.layout--52_48,
+  .layout--pair-xs.layout--48_52,
+  .layout--pair-xs.layout--60_40,
+  .layout--pair-xs.layout--40_60,
+  .layout--pair-xs.layout--66_33,
+  .layout--pair-xs.layout--70_30,
+  .layout--pair-xs.layout--80_20,
+  .layout--pair-xs.layout--20_80,
+  .layout--pair-xs.layout--33_33_33,
+  .layout--pair-xs.layout--25_25_25_25 {
+    grid-template-columns: 6fr 6fr;
+  }
+}
+
+/* Pair Small (pair-sm) (If this prop is set, the layout will pair at or  
+    below --breakpoint-sm) -------------------------------------------*/
+
+@media (--max-breakpoint-sm) {
+  .layout--pair-sm.layout--50_50,
+  .layout--pair-sm.layout--52_48,
+  .layout--pair-sm.layout--48_52,
+  .layout--pair-sm.layout--60_40,
+  .layout--pair-sm.layout--40_60,
+  .layout--pair-sm.layout--66_33,
+  .layout--pair-sm.layout--70_30,
+  .layout--pair-sm.layout--80_20,
+  .layout--pair-sm.layout--20_80,
+  .layout--pair-sm.layout--33_33_33,
+  .layout--pair-sm.layout--25_25_25_25 {
+    grid-template-columns: 6fr 6fr;
+  }
+}
+
+/* Pair Medium (pair-md) (If this prop is set, the layout will pair at or  
+    below --breakpoint-md) -------------------------------------------*/
+
+@media (--max-breakpoint-md) {
+  .layout--pair-md.layout--50_50,
+  .layout--pair-md.layout--52_48,
+  .layout--pair-md.layout--48_52,
+  .layout--pair-md.layout--60_40,
+  .layout--pair-md.layout--40_60,
+  .layout--pair-md.layout--66_33,
+  .layout--pair-md.layout--70_30,
+  .layout--pair-md.layout--80_20,
+  .layout--pair-md.layout--20_80,
+  .layout--pair-md.layout--33_33_33,
+  .layout--pair-md.layout--25_25_25_25 {
+    grid-template-columns: 6fr 6fr;
+  }
+}
+
+/* Stack XSmall (stack-xs) (If this prop is set, the layout will stack at or  
   below --breakpoint-xs) -------------------------------------------*/
 
 @media (--max-breakpoint-xs) {
@@ -304,7 +357,7 @@
 
 .layout--top-gutter-xl {
   display: block;
-  margin-top: var(--size-7);
+  margin-top: var(--size-8);
 }
 
 /* Bottom gutter -------------------------------*/
@@ -326,7 +379,7 @@
 
 .layout--bottom-gutter-xl {
   display: block;
-  margin-bottom: var(--size-7);
+  margin-bottom: var(--size-8);
 }
 
 /* Vertical and Horizontal alignment -------------------------------*/

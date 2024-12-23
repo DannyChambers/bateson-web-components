@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import clsx from "clsx";
 import styles from "./Flyout.module.css";
-import { SchemeProvider } from "@/components/SchemeProvider";
 import { Button } from "@/components/Button";
 import { breakpoint } from "@/foundation/dimension/dimension.ts";
 import { useMediaQuery } from "@/utilities/useMediaQuery.ts";
@@ -22,14 +21,14 @@ const Flyout: React.FC<FlyoutProps> = ({
   position,
   children,
   loadOpen = false,
-  backgroundColor = "transparent",
+  backgroundColor,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [loadedOpen, setLoadedOpen] = useState(loadOpen);
 
   const { color } = useTheme();
 
-  const isDesktopLarge = useMediaQuery(`(min-width: ${breakpoint.lg.value})`);
+  const isDesktop = useMediaQuery(`(min-width: ${breakpoint.md.value})`);
 
   const handleToggle = () => {
     const nextOpenState = !isOpen;
@@ -60,7 +59,7 @@ const Flyout: React.FC<FlyoutProps> = ({
         className={clsx(styles["flyout-overlay"])}
         onClick={handleClose}
       ></div>
-      {!isDesktopLarge && (
+      {!isDesktop && (
         <div className={styles["flyout-trigger"]}>
           <Button
             onClick={handleToggle}
@@ -73,33 +72,32 @@ const Flyout: React.FC<FlyoutProps> = ({
           </Button>
         </div>
       )}
-      <SchemeProvider scheme="dark">
-        <div
-          className={clsx(styles["flyout-content"])}
-          role="dialog"
-          aria-modal="true"
-          aria-labelledby="flyout-title"
-          style={{ backgroundColor }}
-        >
-          <h2 className={styles["flyout-title"]}>{flyoutTitle}</h2>
-          {children}
 
-          {!isDesktopLarge && (
-            <div className={styles["flyout__close"]}>
-              <Button
-                appearance="body-3"
-                tier="tertiary"
-                icon="close"
-                iconOnly
-                iconColor={color.brand4.value}
-                onClick={handleClose}
-              >
-                Close
-              </Button>
-            </div>
-          )}
-        </div>
-      </SchemeProvider>
+      <div
+        className={clsx(styles["flyout-content"])}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="flyout-title"
+        style={{ backgroundColor }}
+      >
+        <h2 className={styles["flyout-title"]}>{flyoutTitle}</h2>
+        {children}
+
+        {!isDesktop && (
+          <div className={styles["flyout__close"]}>
+            <Button
+              appearance="body-3"
+              tier="tertiary"
+              icon="close"
+              iconOnly
+              iconColor={color.brand4.value}
+              onClick={handleClose}
+            >
+              Close
+            </Button>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

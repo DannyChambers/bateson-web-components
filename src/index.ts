@@ -19,7 +19,7 @@ import "@/foundation/typography/typography.css";
 // ------------------------------------------------------------- //
 
 export { color } from "@/foundation/color/color";
-export { breakpoint } from "@/foundation/dimension/dimension";
+export { breakpoint, size, radius } from "@/foundation/dimension/dimension";
 
 // ------------------------------------------------------------- //
 //  Components                                                   //
@@ -83,6 +83,9 @@ export type {
   PrimarySubNavigationItemProps,
 } from "@/components/PrimaryNavigation";
 
+export { PrimaryUtility } from "@/components/PrimaryUtility";
+export type { PrimaryUtilityProps } from "@/components/PrimaryUtility";
+
 export { Tabs } from "@/components/Tabs";
 export type { TabsProps } from "@/components/Tabs";
 
@@ -100,6 +103,9 @@ export type { PageHeaderProps } from "@/components/PageHeader";
 
 export { PageFooter } from "@/components/PageFooter";
 export type { PageFooterProps } from "@/components/PageFooter";
+
+export { SiteFooter } from "@/components/SiteFooter";
+export type { SiteFooterProps } from "@/components/SiteFooter";
 
 export { Logo } from "@/components/Logo";
 export type { LogoProps } from "@/components/Logo";

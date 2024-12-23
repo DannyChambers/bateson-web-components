@@ -39,7 +39,8 @@ export interface LayoutProps {
     | "80_20"
     | "33_33_33"
     | "25_25_25_25";
-  stack?: "sm" | "md";
+  pair?: "xs" | "sm" | "md";
+  stack?: "xs" | "sm" | "md";
   contentReverse?: boolean;
   gap?: "none" | "sm" | "md" | "lg" | "xl";
   topGutter?: "sm" | "md" | "lg" | "xl";
@@ -65,6 +66,7 @@ function Layout({
   verticalAlign,
   horizontalAlign,
   grid,
+  pair,
   stack,
   contentReverse = false,
   gap,
@@ -80,6 +82,7 @@ function Layout({
     [styles[`layout--verticalAlign-${verticalAlign}`]]: verticalAlign,
     [styles[`layout--horizontalAlign-${horizontalAlign}`]]: horizontalAlign,
     [styles[`layout--${grid}`]]: grid,
+    [styles[`layout--pair-${pair}`]]: pair,
     [styles[`layout--stack-${stack}`]]: stack,
     [styles["layout--content-reverse"]]: contentReverse,
     [styles[`layout--gap-${gap}`]]: gap,

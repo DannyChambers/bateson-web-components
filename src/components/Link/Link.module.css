@@ -12,12 +12,10 @@
   align-items: center;
   color: var(--brand-17);
   display: inline-flex;
-  font-family: var(--font-family-body);
-  font-weight: bold;
   text-decoration: underline;
   text-decoration-color: transparent;
   text-underline-offset: var(--size-3);
-  transition: all var(--transition-0);
+  transition: all var(--transition-3);
 
   &:has(svg) {
     gap: var(--size-4);

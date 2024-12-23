@@ -32,6 +32,16 @@ Close.args = {
   name: "close",
 };
 
+export const Phone = Template.bind({});
+Phone.args = {
+  name: "phone",
+};
+
+export const Envelope = Template.bind({});
+Envelope.args = {
+  name: "envelope",
+};
+
 export const LinkedInLogo = Template.bind({});
 LinkedInLogo.args = {
   name: "linkedin-logo",

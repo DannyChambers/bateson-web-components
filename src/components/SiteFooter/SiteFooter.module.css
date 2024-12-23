@@ -1,18 +1,24 @@
 /* -------------------------------------------- */
 /*                                              */
-/* PageFooter                                   */
+/* SiteFooter                                   */
 /* -> Styles                                    */
 /*                                              */
 /* -------------------------------------------- */
 
-.page-footer {
-  background: var(--brand-1);
-  padding: var(--size-8) var(--size-6);
+.site-footer {
+  padding: var(--size-6) 0;
 
-  .page-footer-container {
+  .site-footer-container {
     max-width: var(--maximum-page-width);
     margin: 0 auto;
-    position: relative;
-    padding: var(--size-6);
+    padding: 0 var(--size-8);
+
+    @media (--min-breakpoint-md) {
+      padding: 0 var(--size-10);
+    }
+
+    @media (--min-breakpoint-lg) {
+      padding: 0 var(--size-6);
+    }
   }
 }

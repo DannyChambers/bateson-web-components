@@ -1,10 +1,10 @@
 export const breakpoint = {
-  xxs: { value: "320px", variable: "--breakpoint-xxs" },
-  xs: { value: "480px", variable: "--breakpoint-xs" },
-  sm: { value: "768px", variable: "--breakpoint-sm" },
-  md: { value: "1024px", variable: "--breakpoint-md" },
-  lg: { value: "1280px", variable: "--breakpoint-lg" },
-  xl: { value: "1440px", variable: "--breakpoint-xl" },
+  xxs: { value: "320px", number: 320, variable: "--breakpoint-xxs" },
+  xs: { value: "480px", number: 480, variable: "--breakpoint-xs" },
+  sm: { value: "768px", number: 768, variable: "--breakpoint-sm" },
+  md: { value: "1024px", number: 1024, variable: "--breakpoint-md" },
+  lg: { value: "1280px", number: 1280, variable: "--breakpoint-lg" },
+  xl: { value: "1440px", number: 1440, variable: "--breakpoint-xl" },
 };
 
 export const size = {

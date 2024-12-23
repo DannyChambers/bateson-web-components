@@ -49,6 +49,7 @@ const meta: Meta<TextProps> = {
       description: "The text alignment",
     },
     layout: { control: { type: "boolean" } },
+    decorator: { control: { type: "boolean" } },
     color: {
       control: "text",
       description: "The color of the text",

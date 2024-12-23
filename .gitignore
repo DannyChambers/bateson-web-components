@@ -15,6 +15,7 @@ packages/react/src/react-component-lib
 *.tmp
 *.tmp.*
 log.txt
+.npmrc
 
 # IDE/editor/project-specific files
 *.sublime-project

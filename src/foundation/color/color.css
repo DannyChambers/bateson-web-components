@@ -1,114 +1,116 @@
-/* stylelint-disable */
 /* -------------------------------------------- */
 /* Color                                        */
 /* -------------------------------------------- */
 
-/* --------------------------- */
-/*  -- Default (Grayscale)  -- */
-/* --------------------------- */
-
-/*  -- Raw -- */
-
 :root {
-  --color-black: rgb(10 10 10 / 100%);
-  --color-black-33: rgb(10 10 10 / 33%);
-  --color-black-66: rgb(10 10 10 / 66%);
-  --color-dark-gray-1: rgb(20 20 20 / 100%);
-  --color-dark-gray-1-33: rgb(20 20 20 / 33%);
-  --color-dark-gray: rgb(30 30 30 / 100%);
-  --color-dark-gray-33: rgb(30 30 30 / 33%);
-  --color-midnight-gray: rgb(40 40 40 / 100%);
-  --color-midnight-gray-33: rgb(40 40 40 / 33%);
-  --color-deep-gray: rgb(50 50 50 / 100%);
-  --color-deep-gray-33: rgb(50 50 50 / 33%);
-  --color-deep-gray-66: rgb(50 50 50 / 66%);
-  --color-mid-gray: rgb(80 80 80 / 100%);
-  --color-mid-gray-33: rgb(80 80 80 / 33%);
-  --color-slate-gray: rgb(100 100 100 / 100%);
-  --color-slate-gray-33: rgb(100 100 100 / 33%);
-  --color-light-gray: rgb(140 140 140 / 100%);
-  --color-light-gray-33: rgb(140 140 140 / 33%);
-  --color-brilliant-gray: rgb(200 200 200 / 100%);
-  --color-brilliant-gray-33: rgb(200 200 200 / 33%);
-  --color-pale-gray: rgb(220 220 220 / 100%);
-  --color-pale-gray-33: rgb(220 220 220 / 33%);
-  --color-soft-gray: rgb(230 230 230 / 100%);
-  --color-soft-gray-33: rgb(230 230 230 / 33%);
-  --color-white: rgb(240 240 240 / 100%);
-  --color-white-33: rgb(240 240 240 / 33%);
-  --color-brilliant-white: rgb(255 255 255 / 100%);
-  --color-brilliant-white-33: rgb(255 255 255 / 33%);
-}
+  /* --------------------------- */
+  /*  -- Default (Grayscale)  -- */
+  /* --------------------------- */
 
-/*  -- Alias -- */
+  .theme--Grayscale {
+    /*  -- Raw -- */
+    --color-black: rgb(10 10 10 / 100%);
+    --color-black-33: rgb(10 10 10 / 33%);
+    --color-black-66: rgb(10 10 10 / 66%);
+    --color-dark-gray-1: rgb(20 20 20 / 100%);
+    --color-dark-gray-1-33: rgb(20 20 20 / 33%);
+    --color-dark-gray: rgb(30 30 30 / 100%);
+    --color-dark-gray-33: rgb(30 30 30 / 33%);
+    --color-midnight-gray: rgb(40 40 40 / 100%);
+    --color-midnight-gray-33: rgb(40 40 40 / 33%);
+    --color-deep-gray: rgb(50 50 50 / 100%);
+    --color-deep-gray-33: rgb(50 50 50 / 33%);
+    --color-deep-gray-66: rgb(50 50 50 / 66%);
+    --color-mid-gray: rgb(80 80 80 / 100%);
+    --color-mid-gray-33: rgb(80 80 80 / 33%);
+    --color-slate-gray: rgb(100 100 100 / 100%);
+    --color-slate-gray-33: rgb(100 100 100 / 33%);
+    --color-light-gray: rgb(140 140 140 / 100%);
+    --color-light-gray-33: rgb(140 140 140 / 33%);
+    --color-brilliant-gray: rgb(200 200 200 / 100%);
+    --color-brilliant-gray-33: rgb(200 200 200 / 33%);
+    --color-pale-gray: rgb(220 220 220 / 100%);
+    --color-pale-gray-33: rgb(220 220 220 / 33%);
+    --color-soft-gray: rgb(230 230 230 / 100%);
+    --color-soft-gray-33: rgb(230 230 230 / 33%);
+    --color-white: rgb(240 240 240 / 100%);
+    --color-white-33: rgb(240 240 240 / 33%);
+    --color-brilliant-white: rgb(255 255 255 / 100%);
+    --color-brilliant-white-33: rgb(255 255 255 / 33%);
 
-:root {
-  --brand-1: var(--color-black);
-  --brand-2: var(--color-black-33);
-  --brand-3: var(--color-black-66);
-  --brand-4: var(--color-dark-gray-1);
-  --brand-5: var(--color-dark-gray-1-33);
-  --brand-6: var(--color-dark-gray);
-  --brand-7: var(--color-dark-gray-33);
-  --brand-8: var(--color-midnight-gray);
-  --brand-9: var(--color-midnight-gray-33);
-  --brand-10: var(--color-deep-gray);
-  --brand-11: var(--color-deep-gray-33);
-  --brand-12: var(--color-deep-gray-66);
-  --brand-13: var(--color-mid-gray);
-  --brand-14: var(--color-mid-gray-33);
-  --brand-15: var(--color-slate-gray);
-  --brand-16: var(--color-slate-gray-33);
-  --brand-17: var(--color-light-gray);
-  --brand-18: var(--color-light-gray-33);
-  --brand-19: var(--color-brilliant-gray);
-  --brand-20: var(--color-brilliant-gray-33);
-  --brand-21: var(--color-pale-gray);
-  --brand-22: var(--color-pale-gray-33);
-  --brand-23: var(--color-soft-gray);
-  --brand-24: var(--color-soft-gray-33);
-  --brand-25: var(--color-white);
-  --brand-26: var(--color-white-33);
-  --brand-27: var(--color-brilliant-white);
-  --brand-28: var(--color-brilliant-white-33);
-  --brand-29: var(--color-dark-gray-1-33);
-  --brand-30: var(--color-deep-gray-66);
-  --brand-31: var(--color-slate-gray-33);
-  --brand-32: var(--color-light-gray-33);
-  --brand-33: var(--color-soft-gray);
-  --brand-34: var(--color-pale-gray);
-  --brand-35: var(--color-brilliant-white-33);
-  --brand-36: var(--color-brilliant-gray-33);
-  --brand-37: var(--color-light-gray);
-  --brand-38: var(--color-dark-gray-33);
-  --brand-39: var(--color-black-66);
-  --brand-40: var(--color-mid-gray-33);
-  --brand-41: var(--color-light-gray-66);
-  --brand-42: var(--color-soft-gray-33);
-}
+    /*  -- Alias -- */
 
-/* --------------------------- */
-/*  -- Engineered Arts  ------ */
-/* --------------------------- */
+    --brand-1: var(--color-black);
+    --brand-2: var(--color-black-33);
+    --brand-3: var(--color-black-66);
+    --brand-4: var(--color-dark-gray-1);
+    --brand-5: var(--color-dark-gray-1-33);
+    --brand-6: var(--color-dark-gray);
+    --brand-7: var(--color-dark-gray-33);
+    --brand-8: var(--color-midnight-gray);
+    --brand-9: var(--color-midnight-gray-33);
+    --brand-10: var(--color-deep-gray);
+    --brand-11: var(--color-deep-gray-33);
+    --brand-12: var(--color-deep-gray-66);
+    --brand-13: var(--color-mid-gray);
+    --brand-14: var(--color-mid-gray-33);
+    --brand-15: var(--color-slate-gray);
+    --brand-16: var(--color-slate-gray-33);
+    --brand-17: var(--color-light-gray);
+    --brand-18: var(--color-light-gray-33);
+    --brand-19: var(--color-brilliant-gray);
+    --brand-20: var(--color-brilliant-gray-33);
+    --brand-21: var(--color-pale-gray);
+    --brand-22: var(--color-pale-gray-33);
+    --brand-23: var(--color-soft-gray);
+    --brand-24: var(--color-soft-gray-33);
+    --brand-25: var(--color-white);
+    --brand-26: var(--color-white-33);
+    --brand-27: var(--color-brilliant-white);
+    --brand-28: var(--color-brilliant-white-33);
+    --brand-29: var(--color-dark-gray-1-33);
+    --brand-30: var(--color-deep-gray-66);
+    --brand-31: var(--color-slate-gray-33);
+    --brand-32: var(--color-light-gray-33);
+    --brand-33: var(--color-soft-gray);
+    --brand-34: var(--color-pale-gray);
+    --brand-35: var(--color-brilliant-white-33);
+    --brand-36: var(--color-brilliant-gray-33);
+    --brand-37: var(--color-light-gray);
+    --brand-38: var(--color-dark-gray-33);
+    --brand-39: var(--color-black-66);
+    --brand-40: var(--color-mid-gray-33);
+    --brand-41: var(--color-light-gray-66);
+    --brand-42: var(--color-soft-gray-33);
+    --color-text-dark: var(--brand-1);
+    --color-text-light: var(--brand-4);
+  }
 
-/* -- Raw -- */
+  /* --------------------------- */
+  /*  -- Engineered Arts  ------ */
+  /* --------------------------- */
 
-:root {
-  --color-black: rgb(22, 24, 23 / 100%);
-  --color-black-33: rgb(22, 24, 23 / 33%);
-  --color-black-66: rgb(22, 24, 23 / 66%);
-  --color-white: rgb(234, 238, 241 / 100%);
-  --color-white-33: rgb(234, 238, 241 / 33%);
-  --color-blue: rgb(87, 161, 213 / 100%);
-}
+  .theme--EngineeredArts {
+    /* -- Raw -- */
 
-/*  -- Alias -- */
+    --color-black: rgb(0 0 0 / 100%);
+    --color-offblack: rgb(22 24 23 / 100%);
+    --color-black-66: rgb(22 24 23 / 66%);
+    --color-white: rgb(234 238 241 / 100%);
+    --color-offWhite: rgba(234 238 241 / 100%);
+    --color-white-33: rgb(234 238 241 / 33%);
+    --color-blue: rgb(87 161 213 / 100%);
 
-.theme--EngineeredArts {
-  --brand-1: var(--color-black);
-  --brand-2: var(--color-black-33);
-  --brand-3: var(--color-black-66);
-  --brand-4: var(--color-white);
-  --brand-5: var(--color-white-33);
-  --brand-6: var(--color-blue);
+    /*  -- Alias -- */
+
+    --brand-1: var(--color-offblack);
+    --brand-2: var(--color-black);
+    --brand-3: var(--color-black-66);
+    --brand-4: var(--color-white);
+    --brand-5: var(--color-white-33);
+    --brand-6: var(--color-blue);
+    --brand-7: var(--color-offWhite);
+    --color-text-dark: var(--brand-1);
+    --color-text-light: var(--brand-7);
+  }
 }

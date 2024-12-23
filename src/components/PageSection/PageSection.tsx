@@ -20,6 +20,14 @@ import styles from "./PageSection.module.css";
 export interface PageSectionProps {
   backgroundColor?: string;
   backgroundImage?: string;
+  backgroundImagePosition?:
+    | "topLeft"
+    | "topRight"
+    | "bottomRight"
+    | "bottomLeft"
+    | "center"
+    | "cover";
+  backgroundVideo?: string; // New prop for background video
   children: React.ReactNode;
   screen?: "half" | "full";
   padding?: "sm" | "md" | "lg";
@@ -33,6 +41,8 @@ export interface PageSectionProps {
 function PageSection({
   backgroundColor = "transparent",
   backgroundImage,
+  backgroundImagePosition,
+  backgroundVideo, // Destructure the new prop
   children,
   screen,
   padding = "md",
@@ -47,12 +57,27 @@ function PageSection({
         styles["page-section"],
         screen && styles[`page-section--${screen}screen`],
         padding && styles[`page-section--padding-${padding}`],
+        backgroundImagePosition &&
+          styles[`page-section-backgroundPosition--${backgroundImagePosition}`],
+        backgroundVideo && styles["page-section--video"],
       )}
       style={{
         backgroundColor: backgroundColor,
-        backgroundImage: `url(${backgroundImage})`,
+        backgroundImage: backgroundImage
+          ? `url(${backgroundImage})`
+          : undefined,
       }}
     >
+      {backgroundVideo && (
+        <video
+          className={styles["page-section__background-video"]}
+          src={backgroundVideo}
+          autoPlay
+          loop
+          muted
+          playsInline
+        />
+      )}
       {children}
     </Tag>
   );

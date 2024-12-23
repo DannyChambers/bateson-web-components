@@ -6,5 +6,40 @@
 /* -------------------------------------------- */
 
 .page-header {
-  padding: var(--size-6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--size-13);
+  background: var(--brand-1);
+  z-index: 9999;
+
+  @media (--min-breakpoint-md) {
+    height: var(--size-15);
+    background: transparent;
+
+    &.page-header--scroll {
+      background: var(--brand-1);
+    }
+  }
+
+  .page-header-container {
+    max-width: var(--maximum-page-width);
+    margin: 0 auto;
+    position: relative;
+    height: 100%;
+    padding: 0 var(--size-12) 0 var(--size-8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--size-6);
+
+    @media (--min-breakpoint-md) {
+      padding: 0 var(--size-10);
+    }
+
+    @media (--min-breakpoint-lg) {
+      padding: 0 var(--size-6);
+    }
+  }
 }

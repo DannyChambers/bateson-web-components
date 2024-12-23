@@ -23,6 +23,8 @@ export interface ListProps {
   children: React.ReactNode;
   tag?: "ul" | "ol";
   inline?: "left" | "center" | "right";
+  color?: string;
+  columns?: number;
 }
 
 // --------------------------------------------
@@ -35,6 +37,8 @@ function List({
   children,
   tag = "ul",
   inline,
+  color,
+  columns,
 }: ListProps) {
   const Tag = tag === "ol" ? "ol" : "ul";
   return (
@@ -48,6 +52,10 @@ function List({
         inline && styles["list-inline"],
         inline && styles[`list-inline--${inline}`],
       )}
+      style={{
+        ...(color && { color }),
+        ...(columns && { columnCount: `${columns}` }),
+      }}
     >
       {children}
     </Tag>

@@ -37,6 +37,7 @@ export interface TextProps {
   layout?: boolean;
   font?: "heading" | "body";
   weight?: string;
+  decorator?: boolean;
 }
 
 // --------------------------------------------
@@ -53,12 +54,14 @@ function Text({
   font,
   className,
   children,
+  decorator,
 }: TextProps) {
   const classes = clsx(className, styles.text, styles[`text--${alignment}`], {
     [styles["text--no-layout"]]: !layout,
     [styles[`text--${appearance}`]]: appearance,
     [styles[`text--font-${font}`]]: font,
     [styles[`text--weight-${weight}`]]: weight,
+    [styles["text--decorator"]]: decorator,
   });
 
   // Function to prevent orphan words

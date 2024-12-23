@@ -18,7 +18,7 @@
   color: var(--color-text-dark);
   margin: 0;
   text-decoration: none;
-  max-width: 75ch;
+  /* max-width: 75ch; */
 }
 
 span.text {
@@ -181,6 +181,27 @@ span.text {
 
 .text--weight-bold {
   font-weight: bold;
+}
+
+/* -------------------------------------------- */
+/*  Decorator (blue underline in this case)     */
+/* -------------------------------------------- */
+
+.text--decorator {
+  position: relative;
+  padding-bottom: var(--size-4);
+
+  &::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--brand-6);
+  }
 }
 
 /* -------------------------------------------- */

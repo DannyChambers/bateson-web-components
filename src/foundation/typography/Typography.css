@@ -4,29 +4,28 @@
 
 /* ----- Fonts ----- */
 
-/* Italiana */
+/* NunitoSansBold */
 
 @font-face {
-  font-family: Italiana;
+  font-family: NunitoSansBold;
   src:
-    local("Italiana"),
-    url("@/assets/fonts/italiana-regular.woff2") format("woff2"),
-    url("@/assets/fonts/italiana-regular.ttf") format("truetype");
-  font-weight: 400;
+    local("NunitoSansBold"),
+    url("@/assets/fonts/Nunito-Sans-Bold/nunito-sans-bold.woff2")
+      format("woff2");
+  font-weight: 700;
   font-style: normal;
   font-display: optional;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Inter */
+/* NunitoRegular */
 
 @font-face {
-  font-family: Inter;
+  font-family: NunitoRegular;
   src:
-    local("Inter"),
-    url("@/assets/fonts/inter-regular.woff") format("woff"),
-    url("@/assets/fonts/inter-regular.ttf") format("truetype");
+    local("NunitoRegular"),
+    url("@/assets/fonts/Nunito-Regular/nunito-regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: optional;
@@ -37,10 +36,8 @@
 :root {
   /* ----- General ----- */
 
-  --font-family-heading: "Italiana", georgia, serif;
-  --font-family-body: "Inter", arial, sans-serif;
-  --color-text-dark: var(--color-black);
-  --color-text-light: var(--color-white);
+  --font-family-heading: "NunitoSansBold";
+  --font-family-body: "NunitoRegular";
 
   /* ----- Heading 1 ----- */
 
